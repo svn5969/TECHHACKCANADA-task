@@ -11,7 +11,7 @@ const Footer = () => {
        
             <footer class="site-footer">
                 <div class="container">
-                    <div className=" d-flex">
+                    <div className=" d-flex flex-wrap">
                         <p className="px-1">Home</p>
                         <p className="px-2">|</p>
                         <p className="px-2">Terms & Condition</p>
