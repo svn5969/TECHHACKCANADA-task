@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../../App';
-import { Link } from "react-router-dom";
-import { Nav, nav, Navbar } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 
 const Header = () => {
     const [loggedinUser, setLoggedinUser] = useContext(UserContext);
 
     console.log(loggedinUser.displayName);
+    console.log(setLoggedinUser);
     return (
         <>
 

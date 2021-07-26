@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 const Series = () => {
     const [series, setSeries] = useState([])
@@ -9,7 +9,7 @@ const Series = () => {
             .then(res => res.json())
             .then(data => setSeries(data.entries))
     }, [])
-    const seriesData = series.filter(series => series.programType == "series" && series.releaseYear >= "2010");
+    const seriesData = series.filter(series => series.programType === "series" && series.releaseYear >= "2010");
     seriesData.sort(function(a,b){
         return (a.title < b.title ? -1 : (a.title > b.title ? 1 : 0));
       })

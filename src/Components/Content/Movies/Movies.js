@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 const Movies = () => {
     const [movies, setMovies] = useState([])
     useEffect(() => {
@@ -8,8 +8,8 @@ const Movies = () => {
             .then(res => res.json())
             .then(data => setMovies(data.entries))
     }, [])
-    const moviesData = movies.filter(movie => movie.programType == "movie" && movie.releaseYear >= "2010");
-    moviesData.sort(function(a,b){
+    const moviesData = movies.filter(movie => movie.programType === "movie" && movie.releaseYear >= "2010");
+        moviesData.sort(function(a,b){
         return (a.title < b.title ? -1 : (a.title > b.title ? 1 : 0));
       })
       console.log(moviesData)

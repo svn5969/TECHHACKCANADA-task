@@ -1,8 +1,7 @@
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import icon_movie from '../../images/movie.jpg';
 import icon_series from '../../images/tv-series.png';
-import bg from '../../images/bg.jpg';
 import { useHistory } from "react-router-dom";
 import './Content.css'
 const Content = () => {

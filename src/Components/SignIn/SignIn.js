@@ -7,6 +7,7 @@ import google from '../../images/google.jpg'
 const SignIn = () => {
     initializeSignIn();
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    console.log(loggedInUser);
     const [newUser, setNewUser] = useState(false);
     const [user, setUser] = useState({
         isSignIn: false,
