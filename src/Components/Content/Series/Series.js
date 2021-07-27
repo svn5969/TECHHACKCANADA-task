@@ -10,21 +10,21 @@ const Series = () => {
             .then(data => setSeries(data.entries))
     }, [])
     const seriesData = series.filter(series => series.programType === "series" && series.releaseYear >= "2010");
-    seriesData.sort(function(a,b){
+    seriesData.sort(function (a, b) {
         return (a.title < b.title ? -1 : (a.title > b.title ? 1 : 0));
-      })
-      console.log(seriesData)
+    })
+    console.log(seriesData)
     return (
         <div className="d-flex flex-wrap">
-        { seriesData.map(series => (
+            {seriesData.map(series => (
                 <div className="col-md-2 ps-3">
-                    <Card style={{ height:'230px', borderRadius:'10px', }} className="my-2 shadow align-items-center">
+                    <Card style={{ height: '300px', borderRadius: '10px', }} className="my-2 shadow align-items-center">
 
-                        <Card.Img variant="top" style={{ height:'150px' }} src={series.images["Poster Art"].url} />
-                      
+                        <Card.Img variant="top" style={{ height: '150px' }} src={series.images["Poster Art"].url} />
+
                         <Card.Body>
-                        <h6>{series.title}</h6>
-
+                            <h6>{series.title}</h6>
+                            <small>Released Year : {series.releaseYear}</small>
                         </Card.Body>
 
                     </Card>

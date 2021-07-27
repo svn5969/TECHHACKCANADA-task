@@ -17,13 +17,13 @@ const Movies = () => {
         <div className="d-flex flex-wrap">
         { moviesData.map(movie => (
                 <div className="col-md-2 ps-3">
-                    <Card style={{ height:'230px', borderRadius:'10px', }} className="my-2 shadow align-items-center">
+                    <Card style={{ height:'300px', borderRadius:'10px', }} className="my-2 shadow align-items-center">
 
                         <Card.Img variant="top" style={{ height:'150px' }} src={movie.images["Poster Art"].url} />
                         
                         <Card.Body>
                         <h6>{movie.title}</h6>
-
+                        <small>Released Year : {movie.releaseYear}</small>
                         </Card.Body>
 
                     </Card>
